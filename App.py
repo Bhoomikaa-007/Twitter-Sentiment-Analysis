@@ -31,10 +31,10 @@ def fetch_tweets_v2(search_term, no_of_tweets):
                     "created_at": tweet.created_at
                 })
         else:
-            print("⚠️ No tweets found. Using sample data.")
+            print("No tweets found. Using sample data.")
             return load_demo_tweets()
     except tweepy.TooManyRequests:
-        print("⚠️ Rate limit hit! Waiting 15 mins...")
+        print("Rate limit hit! Waiting 15 mins...")
         time.sleep(15 * 60)
         return fetch_tweets_v2(search_term, no_of_tweets)
     except Exception as e:
@@ -68,8 +68,9 @@ def main():
 
     output_file = "sentiment_analysis_results.csv"
     df.to_csv(output_file, index=False)
-    print(f"✅ Analysis complete! Results saved to {output_file}")
+    print(f"Analysis complete! Results saved to {output_file}")
     print(df.head())
 
 if __name__ == "__main__":
     main()
+
