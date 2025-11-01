@@ -1,0 +1,5 @@
+text,author_id,created_at,sentiment
+I love this new movie!,12345,2025-10-01,Positive
+This weather is terrible.,12346,2025-10-02,Negative
+Python programming is fun!,12347,2025-10-03,Positive
+Nothing special about today.,12348,2025-10-04,Positive
